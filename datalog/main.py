@@ -203,6 +203,7 @@ class Engine:
                 if result == {}:
                     yield {}
                 else:
+                    # return only string keys, which represent bound variables
                     r = {k: v for k, v in result.items() if isinstance(k, str)}
 
                     if not always_return_bindings and r == {}:
