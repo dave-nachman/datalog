@@ -27,7 +27,7 @@ This implementation of datalog uses a bottoms up (or forward chaining) "naive ev
 
 ### Goals
 
-My primary goal was to learn more about Datalog, and it's possible implementation strategries, through implementing it. 
+My primary goal was to learn more about Datalog and its possible implementation strategies through implementing it. 
 
 In addition, I'm interested in the potential for embedding traditional logic programming languages within a general purpose programming language ([core.logic](https://github.com/clojure/core.logic) in Clojure is a good example of this). As part of this, I wanted to explore ways that Datalog clauses could be expressed as an embedded DSL in Python - trying to figure out how to mirror traditional Datalog syntax as much as possible.
 
