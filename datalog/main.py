@@ -1,14 +1,18 @@
 
-from typing import List
+from typing import List, Optional, Collection
 
 
 class Atom:
-    def __init__(self, name, engine, args=None):
+    def __init__(self, name: str, engine: "Engine", args: Optional[Collection["Atom"]]=None):
         self.name = name
         self.args = args
         self.engine = engine
 
         self.items = [self]  # match signature of "And" to allow interop between And and Atom
+
+        # args of length 0 don't make sense, are not allowed
+        if isinstance(args, list):
+            assert len(args)
 
     # as traditional in Datalog, (unknown) variables begin with a capital letter
     def is_variable(self):
@@ -22,7 +26,7 @@ class Atom:
         return Atom(self.name, engine=self.engine, args=args)
 
     def __repr__(self):
-        if self.args is not None:
+        if self.args:
             return "L." + self.name + "(" + ", ".join(repr(arg) for arg in self.args) + ")"
         else:
             return "L." + self.name
