@@ -80,3 +80,9 @@ assert ({"X": L.john} in query)
 
 - "The Essence of Datalog", https://dodisturb.me/posts/2018-12-25-The-Essence-of-Datalog.html
 - http://pages.cs.wisc.edu/~paris/cs838-s16/lecture-notes/lecture8.pdf
+
+### Other datalog implementations
+
+- [pyDatalog](https://github.com/pcarbonn/pyDatalog) - The syntax in this implementation was inspired in part by the embedded DSL in pyDatalog
+- [Arrdem.datalog](https://pypi.org/project/arrdem.datalog/)
+- The [Clojure-flavored dialect](https://docs.datomic.com/on-prem/query.html) of datalog using in Datomic has played an important role in reviving interest in Datalog in recent years
