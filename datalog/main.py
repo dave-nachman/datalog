@@ -10,6 +10,7 @@ class Atom:
 
         self.items = [self]  # match signature of "And" to allow interop between And and Atom
 
+    # as traditional in Datalog, (unknown) variables begin with a capital letter
     def is_variable(self):
         return self.name[0].isupper()
 
