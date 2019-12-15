@@ -107,9 +107,9 @@ def unify(a, b):
 
         mapped = list(map(lambda p: unify(p[0], p[1]), zip(a.args, b.args)))
 
-        arg_subsume = all(x is not False for x in mapped)
+        all_unified = all(x is not False for x in mapped)
 
-        if same_predicate and arg_subsume:
+        if same_predicate and all_unified:
             result = {}
             for x in mapped:
                 result = {**result, **x}
